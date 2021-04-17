@@ -1,4 +1,4 @@
-export default [
+const films = [
   {
     title: "A New Hope",
     episode_id: 4,
@@ -504,3 +504,5 @@ export default [
     url: "http://swapi.dev/api/films/6/",
   },
 ];
+
+export default films;

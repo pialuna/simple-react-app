@@ -3,13 +3,27 @@
 }
 
 .App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  height: 5rem;
   font-size: calc(10px + 2vmin);
   color: black;
+}
+
+.filmlist {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.film {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .App-link {
