@@ -1,34 +1,6 @@
 import "./App.css";
-import films from "./dummyData/films.js";
-
-function FilmList() {
-  return (
-    <section className="filmlist">
-      {films.map((film) => {
-        return (
-          <Film
-            key={film.episode_id}
-            img="https://picsum.photos/70/100"
-            title={film.title}
-          ></Film>
-        );
-      })}
-    </section>
-  );
-}
-
-function Film({ img, title }) {
-  return (
-    <div className="film">
-      <img src={img} alt={title} />
-      <h1>{title}</h1>
-      <div>
-        <button>Like</button>
-        <button>Details</button>
-      </div>
-    </div>
-  );
-}
+// components
+import FilmList from "./FilmList";
 
 function App() {
   return (
