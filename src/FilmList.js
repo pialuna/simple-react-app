@@ -4,7 +4,6 @@ import React from "react";
 import Film from "./Film";
 
 const FilmList = ({ films }) => {
-  console.log(films);
   return (
     <section className="filmlist">
       {films.map((film) => {
@@ -13,6 +12,7 @@ const FilmList = ({ films }) => {
             key={film.episode_id}
             img="https://picsum.photos/70/90"
             title={film.title}
+            characters={film.characters}
           ></Film>
         );
       })}

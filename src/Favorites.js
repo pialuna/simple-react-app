@@ -4,9 +4,10 @@ import FilmList from "./FilmList";
 const Favorites = ({ films }) => {
   return (
     <section>
-      <h2>Films</h2>
+      <h1>Favorites</h1>
+      <h2>My favorite Films</h2>
       <FilmList films={films} />
-      <h2>Characters</h2>
+      <h2>My favorite Characters</h2>
       <div>Character List</div>
     </section>
   );

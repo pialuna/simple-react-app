@@ -10,7 +10,6 @@ function App() {
     <div className="App">
       <header className="App-header"></header>
 
-      <h1>My Favorites</h1>
       <Favorites films={films.filter((film) => film.title === "A New Hope")} />
       <hr />
       <h1>All Films</h1>
