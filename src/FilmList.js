@@ -2,10 +2,9 @@ import React from "react";
 
 // components
 import Film from "./Film";
-// data
-import films from "./dummyData/films";
 
-const FilmList = () => {
+const FilmList = ({ films }) => {
+  console.log(films);
   return (
     <section className="filmlist">
       {films.map((film) => {
