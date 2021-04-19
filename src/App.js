@@ -1,12 +1,14 @@
 import "./App.css";
 // components
 import FilmList from "./FilmList";
+import Favorites from "./Favorites";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header"></header>
 
+      <Favorites />
       <FilmList />
 
       <a

@@ -1,7 +1,7 @@
 import React from "react";
 
 // components
-import Film from "./FilmList";
+import Film from "./Film";
 // data
 import films from "./dummyData/films";
 
