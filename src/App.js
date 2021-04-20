@@ -1,4 +1,3 @@
-import "./App.css";
 // components
 import FilmList from "./FilmList";
 import Favorites from "./Favorites";
