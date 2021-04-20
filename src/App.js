@@ -1,32 +1,42 @@
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // components
 import Navbar from "./components/Navbar";
-import FilmList from "./components/FilmList";
+import Films from "./components/Films";
+import Characters from "./components/Characters";
 import Favorites from "./components/Favorites";
+import NotFound from "./components/NotFound";
 // data
-import films from "./dummyData/films";
+import filmsData from "./dummyData/films";
 
 function App() {
   return (
     <>
-      <Navbar />
-
-      <div className="p-4">
-        <Favorites
-          films={films.filter((film) => film.title === "A New Hope")}
-        />
-        <hr />
-        <h1>All Films</h1>
-        <FilmList films={films} />
-
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </div>
+      <Router>
+        <Navbar />
+        <div className="p-4">
+          <Switch>
+            <Route exact path="/">
+              <Films />
+            </Route>
+            <Route path="/films">
+              <Films />
+            </Route>
+            {/* <Route path="/films/:id" children={<Film />}></Route> */}
+            <Route path="/characters">
+              <Characters />
+            </Route>
+            {/* <Route path="/characters/:id" children={<Character />}></Route> */}
+            <Route path="/favorites">
+              <Favorites
+                films={filmsData.filter((film) => film.title === "A New Hope")}
+              />
+            </Route>
+            <Route path="*">
+              <NotFound />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     </>
   );
 }

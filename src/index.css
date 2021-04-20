@@ -7,11 +7,19 @@
     @apply text-2xl;
     @apply font-bold;
     @apply my-2;
+    @apply text-purple-900;
   }
   h2 {
     @apply text-xl;
     @apply font-bold;
     @apply my-2;
+    @apply text-gray-600;
+  }
+  h3 {
+    @apply text-lg;
+    @apply font-bold;
+    @apply my-2;
+    @apply text-gray-600;
   }
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
