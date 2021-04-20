@@ -5,7 +5,7 @@ import Character from "./Character";
 
 const CharacterList = ({ characters }) => {
   return (
-    <section className="p-1 flex-col items-stretch justify-start">
+    <section className="w-full p-1 flex-col items-stretch justify-start">
       {characters.map((character) => {
         return (
           <Character
