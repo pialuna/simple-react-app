@@ -16,10 +16,10 @@ function App() {
         <div className="p-4">
           <Switch>
             <Route exact path="/">
-              <Films />
+              <Films films={filmsData} />
             </Route>
             <Route path="/films">
-              <Films />
+              <Films films={filmsData} />
             </Route>
             {/* <Route path="/films/:id" children={<Film />}></Route> */}
             <Route path="/characters">
