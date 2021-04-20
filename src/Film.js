@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import HeartButton from "./HeartButton";
 import CharacterList from "./CharacterList";
 
 const Film = ({ img, title, characters }) => {
@@ -10,18 +11,12 @@ const Film = ({ img, title, characters }) => {
     // to do: add id,title to favorites?
   };
   return (
-    <div className="film">
-      <img src={img} alt={title} />
-      <div>
-        <h1>{title}</h1>
-        <CharacterList characters={characters}></CharacterList>
+    <div className="bg-white w-full p-4 mb-4 flex flex-col items-start justify-between">
+      <div className="w-full flex flex-row items-center justify-between">
+        <h2>{title}</h2>
+        <HeartButton filled={liked} clickHandler={clickHandler}></HeartButton>
       </div>
-
-      <div>
-        <button type="button" onClick={() => clickHandler(title)}>
-          {liked ? "Dislike" : "Like"}
-        </button>
-      </div>
+      <CharacterList characters={characters}></CharacterList>
     </div>
   );
 };

@@ -5,14 +5,13 @@ import Character from "./Character";
 
 const CharacterList = ({ characters }) => {
   return (
-    <section className="filmlist">
+    <section className="p-1 flex-col items-stretch justify-start">
       {characters.map((character) => {
-        console.log(character);
         return (
           <Character
+            // character is currently an URL
             //key={character.name}
             key={character}
-            img="https://picsum.photos/50"
             name={character}
             birthyear={character.birthyear}
           ></Character>
