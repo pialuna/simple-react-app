@@ -1,5 +1,7 @@
 import React from "react";
 
+// The heart / like button
+
 const HeartButton = ({ filled, clickHandler }) => {
   return (
     <button type="button" onClick={clickHandler}>

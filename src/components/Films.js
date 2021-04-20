@@ -1,5 +1,7 @@
 import React from "react";
 
+// The page with the complete list of films
+
 const Films = () => {
   return (
     <div>

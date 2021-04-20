@@ -1,6 +1,8 @@
 import React from "react";
 import FilmList from "./FilmList";
 
+// The favorites page
+
 const Favorites = ({ films }) => {
   return (
     <section>
