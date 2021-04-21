@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // components
 import Navbar from "./components/Navbar";
@@ -5,10 +6,31 @@ import Films from "./components/Films";
 import Characters from "./components/Characters";
 import Favorites from "./components/Favorites";
 import NotFound from "./components/NotFound";
-// data
-import filmsData from "./dummyData/films";
 
 function App() {
+  const [films, setFilms] = useState([]);
+  const [characters, setCharacters] = useState([]);
+  // todo: favorites
+
+  // api calls
+  useEffect(() => {
+    async function fetchFilms() {
+      const response = await fetch("https://swapi.dev/api/films/");
+      const data = await response.json();
+      setFilms(data.results);
+    }
+    async function fetchCharacters() {
+      const response = await fetch("https://swapi.dev/api/people/");
+      const data = await response.json();
+      setCharacters(data.results);
+    }
+    fetchFilms();
+    fetchCharacters();
+  }, []);
+
+  console.log(films);
+  console.log(characters);
+
   return (
     <>
       <Router>
@@ -16,10 +38,10 @@ function App() {
         <div className="p-4">
           <Switch>
             <Route exact path="/">
-              <Films films={filmsData} />
+              <Films films={films} />
             </Route>
             <Route path="/films">
-              <Films films={filmsData} />
+              <Films films={films} />
             </Route>
             {/* <Route path="/films/:id" children={<Film />}></Route> */}
             <Route path="/characters">
@@ -28,7 +50,7 @@ function App() {
             {/* <Route path="/characters/:id" children={<Character />}></Route> */}
             <Route path="/favorites">
               <Favorites
-                films={filmsData.filter((film) => film.title === "A New Hope")}
+                films={films.filter((film) => film.title === "A New Hope")}
               />
             </Route>
             <Route path="*">
