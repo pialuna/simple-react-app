@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Films from "./components/Films";
 import Film from "./components/Film";
 import Characters from "./components/Characters";
-// import Character from "./components/Characters";
+import Character from "./components/Character";
 import Favorites from "./components/Favorites";
 import NotFound from "./components/NotFound";
 
@@ -50,10 +50,12 @@ function App() {
               <Film />
             </Route>
 
-            <Route path="/characters">
+            <Route exact path="/characters">
               <Characters characters={characters} />
             </Route>
-            {/* <Route path="/characters/:id" children={<Character />}></Route> */}
+            <Route path="/characters/:id">
+              <Character />
+            </Route>
             <Route path="/favorites">
               <Favorites
                 films={films.filter((film) => film.title === "A New Hope")}
