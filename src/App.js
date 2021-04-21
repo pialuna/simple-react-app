@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // components
 import Navbar from "./components/Navbar";
 import Films from "./components/Films";
+import Film from "./components/Film";
 import Characters from "./components/Characters";
+// import Character from "./components/Characters";
 import Favorites from "./components/Favorites";
 import NotFound from "./components/NotFound";
 
@@ -40,10 +42,14 @@ function App() {
             <Route exact path="/">
               <Films films={films} />
             </Route>
-            <Route path="/films">
+            <Route exact path="/films">
               <Films films={films} />
             </Route>
-            {/* <Route path="/films/:id" children={<Film />}></Route> */}
+            {/* <Route path="/films/:id" children={<Film films={films} />}></Route> */}
+            <Route path="/films/:id">
+              <Film />
+            </Route>
+
             <Route path="/characters">
               <Characters characters={characters} />
             </Route>

@@ -10,7 +10,7 @@ const CharacterList = ({ characters }) => {
         return (
           <CharacterListItem
             key={character.name}
-            name={character.name}
+            character={character}
           ></CharacterListItem>
         );
       })}
