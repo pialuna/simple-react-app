@@ -29,6 +29,17 @@ npm start
 
 Then open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+### Testing
+
+This project uses [react-testing-library](https://github.com/testing-library/react-testing-library) for unit testing.
+
+Tests can be found in the `src/__tests__` folder.
+
+```
+# Run tests in watch mode
+npm test
+```
+
 ### Production
 
 To prepare the app for production deployment, run the following command:
