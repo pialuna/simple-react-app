@@ -10,9 +10,13 @@ import Favorites from "./components/Favorites";
 import NotFound from "./components/NotFound";
 
 function App() {
+  // fetched data
   const [films, setFilms] = useState([]);
   const [characters, setCharacters] = useState([]);
-  // todo: favorites
+  // saved favorites
+  // to do: how to access these states from children? need redux?
+  const [favoriteFilms, setFavoriteFilms] = useState([]);
+  const [favoriteCharacters, setFavoriteCharacters] = useState([]);
 
   // api calls
   useEffect(() => {
@@ -30,9 +34,6 @@ function App() {
     fetchCharacters();
   }, []);
 
-  //   console.log(films);
-  //   console.log(characters);
-
   return (
     <>
       <Router>
@@ -43,13 +44,11 @@ function App() {
               <Films films={films} />
             </Route>
             <Route exact path="/films">
-              <Films films={films} />
+              <Films films={films} setFavoriteFilms={setFavoriteFilms} />
             </Route>
-            {/* <Route path="/films/:id" children={<Film films={films} />}></Route> */}
             <Route path="/films/:id">
               <Film />
             </Route>
-
             <Route exact path="/characters">
               <Characters characters={characters} />
             </Route>
@@ -57,6 +56,8 @@ function App() {
               <Character />
             </Route>
             <Route path="/favorites">
+              {/* to do */}
+              {/* currently hard-coded favorites */}
               <Favorites
                 films={films.filter((film) => film.title === "A New Hope")}
                 characters={characters.filter(

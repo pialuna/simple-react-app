@@ -20,7 +20,7 @@ const Character = () => {
       const data = await response.json();
       setCharacter(data);
     }
-    // fetch all films for finding intersections
+    // fetch all films for finding intersections with this character
     async function fetchFilms() {
       const response = await fetch("https://swapi.dev/api/films/");
       const data = await response.json();
