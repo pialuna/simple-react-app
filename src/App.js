@@ -12,6 +12,7 @@ import NotFound from "./components/NotFound";
 function App() {
   // fetched data
   const [films, setFilms] = useState([]);
+  // to do: currently only fetches the first 10 characters
   const [characters, setCharacters] = useState([]);
   // saved favorites
   // to do: how to access these states from children? need redux?
