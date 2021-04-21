@@ -9,11 +9,8 @@ const CharacterList = ({ characters }) => {
       {characters.map((character) => {
         return (
           <CharacterListItem
-            // character is currently an URL
-            //key={character.name}
-            key={character}
-            name={character}
-            birthyear={character.birthyear}
+            key={character.name}
+            name={character.name}
           ></CharacterListItem>
         );
       })}

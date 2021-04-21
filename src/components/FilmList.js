@@ -5,7 +5,7 @@ import FilmListItem from "./FilmListItem";
 
 const FilmList = ({ films }) => {
   return (
-    <section className="w-full flex-col items-stretch justify-start">
+    <section className="w-full p-1 flex-col items-stretch justify-start">
       {films.map((film) => {
         return (
           <FilmListItem

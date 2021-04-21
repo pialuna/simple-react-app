@@ -28,8 +28,8 @@ function App() {
     fetchCharacters();
   }, []);
 
-  console.log(films);
-  console.log(characters);
+  //   console.log(films);
+  //   console.log(characters);
 
   return (
     <>
@@ -45,12 +45,15 @@ function App() {
             </Route>
             {/* <Route path="/films/:id" children={<Film />}></Route> */}
             <Route path="/characters">
-              <Characters />
+              <Characters characters={characters} />
             </Route>
             {/* <Route path="/characters/:id" children={<Character />}></Route> */}
             <Route path="/favorites">
               <Favorites
                 films={films.filter((film) => film.title === "A New Hope")}
+                characters={characters.filter(
+                  (character) => character.name === "Luke Skywalker"
+                )}
               />
             </Route>
             <Route path="*">

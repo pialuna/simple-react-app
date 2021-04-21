@@ -7,6 +7,7 @@ const Navbar = () => {
       <Link to="/" className="flex-shrink-0 mr-4 text-purple-400">
         Star Wars
       </Link>
+      {/* to do: active color */}
       <div className="w-full flex flex-row justify-around">
         <Link to="/films">Films</Link>
         <Link to="/characters">Characters</Link>

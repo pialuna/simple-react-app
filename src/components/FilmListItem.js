@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 import HeartButton from "./HeartButton";
-import CharacterList from "./CharacterList";
 
 const FilmListItem = ({ title, characters }) => {
   const [liked, setLiked] = useState(false);
@@ -15,8 +14,7 @@ const FilmListItem = ({ title, characters }) => {
       <div className="w-full flex flex-row items-center justify-between">
         <h3>{title}</h3>
         <HeartButton filled={liked} clickHandler={clickHandler}></HeartButton>
-      </div>
-      <CharacterList characters={characters}></CharacterList>
+      </div>{" "}
     </div>
   );
 };
