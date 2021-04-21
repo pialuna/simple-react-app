@@ -10,7 +10,7 @@ const HeartButton = ({ filled, clickHandler }) => {
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6"
           viewBox="0 0 20 20"
-          fill="#ff5988"
+          fill="#8b5cf6"
         >
           <path
             fillRule="evenodd"
@@ -24,7 +24,7 @@ const HeartButton = ({ filled, clickHandler }) => {
           className="h-6 w-6"
           fill="none"
           viewBox="0 0 24 24"
-          stroke="#ff5988"
+          stroke="#8b5cf6"
         >
           <path
             strokeLinecap="round"

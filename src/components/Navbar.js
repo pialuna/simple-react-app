@@ -11,9 +11,7 @@ const Navbar = () => {
       <div className="w-full flex flex-row justify-around">
         <Link to="/films">Films</Link>
         <Link to="/characters">Characters</Link>
-        <Link to="/favorites" className="text-red-100">
-          Favorites
-        </Link>
+        <Link to="/favorites">Favorites</Link>
       </div>
     </nav>
   );
