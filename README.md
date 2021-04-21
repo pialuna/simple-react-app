@@ -8,7 +8,7 @@ This Star Wars web app contains the following overview pages that can be reached
 
 - `Films`: See a list of Star Wars films and add any to your favorites
 - `Characters`: See a list of Star Wars characters and add any to your favorites
-- `Favorites`: See a list of your favorite Star Wars films and characters
+- `Favorites`: See a list of your favorite Star Wars films and characters (work in progress)
 
 By selecting either a film or a character, you enter the detail pages:
 
