@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# SWAPI React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Star Wars API demo app using React (Create React App) and Tailwind CSS.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+This Star Wars web app contains the following overview pages that can be reached from the top navigation:
 
-### `npm start`
+- `Films`: See a list of Star Wars films and add any to your favorites
+- `Characters`: See a list of Star Wars characters and add any to your favorites
+- `Favorites`: See a list of your favorite Star Wars films and characters
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+By selecting either a film or a character, you enter the detail pages:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- `Film`: Learn more about this film and see a list of its characters
+- `Character`: Learn more about this character and see a list of its films
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Development
 
-### `npm run build`
+```sh
+# Install dependencies
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Run the app in development mode
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Then open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Production
 
-### `npm run eject`
+To prepare the app for production deployment, run the following command:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```sh
+# Build app for production
+npm run build
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+It correctly bundles React in production mode and optimizes the build for the best performance. You can find the result in the `build` folder.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Architecture
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The app mainly contains of the following chomponents:
 
-## Learn More
+### Overview Pages
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![](img/overview-pages.jpg)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `Films`, including `FilmList`
+- `Characters`, including `CharacterList`
+- `Favorites`, including both `FilmList` and `CharacterList`
 
-### Code Splitting
+### Detail Pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![](img/detail-pages.jpg)
 
-### Analyzing the Bundle Size
+- `Film`, including `CharacterList`
+- `Character`, including `FilmList`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Lists
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The list components each have their own item component (`CharacterListItem` and `FilmListItem`) that includes the `HeartButton` component for selecting favorites.
